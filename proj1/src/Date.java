@@ -1,6 +1,7 @@
 
 
 public class Date {
+    //the attributes are restricted to those given in the project documents
     private int year;
     private int month;
     private int day;
