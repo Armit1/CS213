@@ -1,15 +1,16 @@
 
 public class Date {
 	// the attributes are restricted to those given in the project documents
-	private int year;
-	private int month;
-	private int day;
+	private String year;
+	private String month;
+	private String day;
 
 	public Date(String date) {
 		String[] dateSegments = date.split("/");
-		this.month = Integer.parseInt(dateSegments[0]);
-		this.day = Integer.parseInt(dateSegments[1]);
-		this.year = Integer.parseInt(dateSegments[2]);
+
+		this.month = dateSegments[0];
+		this.day = dateSegments[1];
+		this.year = dateSegments[2];
 	}
 
 	public Date() {
@@ -17,10 +18,13 @@ public class Date {
 	}
 
 	public boolean isValid() {
-		if ((month <= 12 && month >= 1)
-		    && (day <= 31 && day >= 1)
-		    && (year <= 2021 && year > 999 && (year + "").length() == 4))
-					return true;
+		int dayToInt = Integer.parseInt(day);
+		int monthToInt = Integer.parseInt(month);
+		int yearToInt = Integer.parseInt(year);
+
+		if ((month.length() == 2 && day.length() == 2 && year.length() == 4) && (monthToInt <= 12 && monthToInt >= 1)
+				&& (dayToInt <= 31 && dayToInt >= 1) && (yearToInt <= 2021 && yearToInt > 999))
+			return true;
 
 		return false;
 	}
