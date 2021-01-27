@@ -5,6 +5,7 @@ public class Book {
     private boolean checkedOut;
     private Date datePublished;
     // define static constant
+    //
     private static int serial = 10000;
 
     public Book(String name, Date datePublished) {

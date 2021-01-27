@@ -15,6 +15,7 @@ public class Library {
         boolean bookFound = false;
 
         // compare book object against objects in books[] iteratively
+        //
         while (searchIndex < books.length) {
             if (books[searchIndex].equals(book)) {
                 bookFound = true;

@@ -12,6 +12,7 @@ public class Date {
         this.year = Integer.parseInt(dateSegments[2]);
     }
 
+    //return todays date
     public Date() {
         Calendar today = Calendar.getInstance();
         this.month = today.MONTH;
