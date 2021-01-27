@@ -5,16 +5,17 @@ public class Book {
     private String name;
     private boolean checkedOut;
     private Date datePublished;
+    private int serial = 10000;
 
     public Book() {
 
     }
 
-    public Book(String number, String name, boolean checkedOut, Date datePublished) {
-        super();
-        this.number = number;
+    public Book(String name, Date datePublished) {
+        serial++;
+        this.number = "Book#" + serial;
         this.name = name;
-        this.checkedOut = checkedOut;
+        this.checkedOut = false;
         this.datePublished = datePublished;
     }
 
